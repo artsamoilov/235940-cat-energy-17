@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Артур Самойлов](https://up.htmlacademy.ru/adaptive/17/user/235940).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Бабченко](https://htmlacademy.ru/profile/babtshe).
 
 ---
 
