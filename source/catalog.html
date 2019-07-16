@@ -2,40 +2,41 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body>
 
 <!-- Верхнее меню -->
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="http://placehold.it/33x38" width="33" height="38" alt="Логотип «Кэт энерджи»">
-        <img class="page-header__logo-title" src="http://placehold.it/101x18" width="101" height="18" alt="Текстовая часть логотипа «Кэт энерджи»">
+      <a class="page-header__logo logotype" href="index.html">
+        <img class="logotype__image" src="http://placehold.it/33x38" width="33" height="38" alt="Логотип «Кэт энерджи»">
+        <img class="logotype__title" src="http://placehold.it/101x18" width="101" height="18" alt="Текстовая часть логотипа «Кэт энерджи»">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--current">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a>Каталог продукции</a>
-            </li>
-            <li class="site-list__item">
-              <a href="program.html">Подбор программы</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--current">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a>Каталог продукции</a>
+          </li>
+          <li class="site-list__item">
+            <a href="program.html">Подбор программы</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
 <!-- Каталог товаров -->
     <main class="catalog">
-      <h1 class="catalog__title">Функциональное питание для котов</h1>
+      <h1 class="catalog__title">Каталог продукции</h1>
+      <h2 class="visually-hidden">Основные товары</h2>
       <ul class="catalog__list">
         <li class="catalog__item item">
           <h3 class="item__heading">Cat Energy PRO 500 г</h3>
+          <!-- Заметка: можно использовать dl -->
           <table class="item__characteristics">
             <tr>
               <td>Объем</td>
@@ -182,12 +183,25 @@
       </a>
       <ul class="page-footer__social-list social">
         <li class="social__item">
-          <a href="social__link social__link--vkontakte">Вконтакте</a>
-          <a href="social__link social__link--instagram">Инстаграм</a>
-          <a href="social__link social__link--facebook">Фейсбук</a>
+          <a class="social__link social__link--vkontakte" href="http://vk.com">
+            <img src="http://placehold.it/22x12" width="22" height="12" alt="Вконтакте">
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="http://instagram.com">
+            <img src="http://placehold.it/23x23" width="23" height="23" alt="Инстаграм">
+            <span class="visually-hidden">Инстаграм</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="http://facebook.com">
+            <img src="http://placehold.it/10x19" width="10" height="19" alt="Фейсбук">
+            <span class="visually-hidden">Фейсбук</span>
+          </a>
         </li>
       </ul>
-      <a href="page-footer__copyright copyright">
+      <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
         <p class="copyright__title">HTML Academy</p>
         <img class="copyright__logo" src="http://placehold.it/27x34" width="27" height="34" alt="Логотип HTML Academy">
       </a>
