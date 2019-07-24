@@ -1,8 +1,11 @@
 .goals {
-  margin: 22px 20px;
+  max-width: @desktop;
+  padding: 22px 20px;
 }
 
 .goals__list {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
 
@@ -13,7 +16,7 @@
   margin-bottom: 20px;
   padding: 20px 20px 0;
 
-  background-color: @light-grey;
+  background-color: @lightest-grey;
 }
 
 .goals__heading {
@@ -59,4 +62,95 @@
   line-height: 16px;
   font-weight: 400;
   text-transform: uppercase;
+  color: @black;
+}
+
+@media (min-width: @tablet) {
+  .goals {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .goals__item {
+    min-height: 372px;
+    margin-bottom: 30px;
+    padding: 52px;
+  }
+
+  .goals__heading {
+    position: relative;
+    margin: 15px 0 30px;
+    padding-left: 0;
+    padding-right: 210px;
+
+    font-size: 36px;
+
+    &::before {
+      width: 200px;
+      height: 200px;
+
+      top: 20px;
+      left: auto;
+      right: 10px;
+    }
+  }
+
+  .goals__description {
+    padding-right: 210px;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    border-bottom: none;
+  }
+
+  .goals__heading--weight-gain + .goals__description {
+    padding-right: 250px;
+  }
+
+  .goals__link {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .goals {
+    margin: 80px auto;
+    padding: 0 110px;
+  }
+
+  .goals__list {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .goals__item {
+    width: 570px;
+    padding: 52px;
+  }
+
+  .goals__heading {
+    padding-left: 164px;
+    padding-right: 0;
+    margin-bottom: 70px;
+
+    &::before {
+      width: 100px;
+      height: 100px;
+
+      top: -30px;
+      left: 0;
+      right: auto;
+    }
+  }
+
+  .goals__heading--weight-gain + .goals__description {
+    padding-right: 0;
+  }
+
+  .goals__description {
+    padding: 0;
+  }
 }

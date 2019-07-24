@@ -1,9 +1,5 @@
 .more {
-  padding: 60px 20px 25px;
-
-  text-align: center;
-
-  border-bottom: 1px solid @lightest-grey;
+  border-bottom: 1px solid @light-grey;
 }
 
 .more__heading {
@@ -29,5 +25,30 @@
 
   color: @dark-grey;
 
-  background-color: @light-grey;
+  background-color: @lightest-grey;
+}
+
+@media (min-width: @tablet) {
+  .more {
+    border: 1px solid @light-grey;
+    background: none;
+  }
+
+  .more__heading {
+    width: 140px;
+    margin: 0 auto 10px;
+
+    font-size: 20px;
+  }
+
+  .more__description {
+    margin: 28px auto 32px;
+    width: 168px;
+
+    font-size: 16px;
+  }
+
+  .more__button {
+    margin-top: auto;
+  }
 }

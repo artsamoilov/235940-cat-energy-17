@@ -1,4 +1,9 @@
 .catalog {
+  max-width: @desktop;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 0;
+
   margin: 0;
 }
 
@@ -17,4 +22,36 @@
   padding: 0;
 
   list-style: none;
+}
+
+@media (min-width: @tablet) {
+  .catalog {
+    padding: 0;
+  }
+
+  .catalog__title {
+    margin: 20px 30px 150px;
+
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
+
+  .catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop) {
+  .catalog {
+    margin: 0 auto;
+    padding: 0 110px;
+  }
+
+  .catalog__title {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }

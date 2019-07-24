@@ -1,9 +1,11 @@
 .guide {
-  margin: 0 20px 40px;
+  max-width: @desktop;
+  margin-bottom: 40px;
+  padding: 0 20px;
 }
 
 .guide__title {
-  margin: 0;
+  margin: 0 0 35px;
 
   font-family: @font-accent;
   font-size: 36px;
@@ -13,6 +15,8 @@
 }
 
 .guide__list {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
 
@@ -21,8 +25,9 @@
 
 .guide__item {
   position: relative;
-
-  padding: 30px 0 0 80px;
+  min-height: 60px;
+  padding-left: 80px;
+  margin-bottom: 20px;
 
   &::before {
     position: absolute;
@@ -31,9 +36,89 @@
     width: 60px;
     height: 60px;
 
-    top: 28px;
+    top: 0;
     left: 0;
 
     background-color: @leaf;
+  }
+}
+
+@media (min-width: @tablet) {
+  .guide {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .guide__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .guide__item {
+    width: 50%;
+    padding: 110px 100px 0 0;
+    margin-bottom: 130px;
+
+    flex-shrink: 0;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      position: absolute;
+      z-index: -1;
+
+      font-family: @font-accent;
+      font-size: 281px;
+      line-height: 281px;
+      color: @lightest-grey;
+
+      top: -40px;
+      left: 120px;
+    }
+  }
+
+  .guide__item--natural {
+    &::after {
+      content: "1";
+    }
+  }
+
+  .guide__item--instant {
+    &::after {
+      content: "2";
+    }
+  }
+
+  .guide__item--replace {
+    &::after {
+      content: "3";
+    }
+  }
+
+  .guide__item--enjoy {
+    &::after {
+      content: "4";
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .guide {
+    padding-left: 110px;
+    padding-right: 110px;
+    margin: 0 auto;
+  }
+
+  .guide__item {
+    width: 25%;
   }
 }

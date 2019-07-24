@@ -1,5 +1,7 @@
 .hero-image {
-  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 20px 0;
 
   font-family: @font-accent;
   text-align: center;
@@ -21,4 +23,51 @@
 .hero-image__description {
   line-height: 14px;
   text-transform: uppercase;
+}
+
+.hero-image__picture {
+  align-self: center;
+}
+
+.hero-image__button {
+  margin: 0;
+}
+
+@media (min-width: @tablet) {
+  .hero-image {
+    max-width: @desktop;
+    margin: 0 auto;
+    padding: 60px 120px;
+    align-items: flex-start;
+
+    text-align: left;
+    color: @black;
+
+    background-image: none;
+  }
+
+  .hero-image__title {
+    width: 420px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .hero-image__description {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .hero-image__button {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .hero-image {
+    padding-left: 190px;
+
+    background-image: url("../../img/index-background-desktop@1x.jpg");
+    background-position: top right;
+  }
 }
