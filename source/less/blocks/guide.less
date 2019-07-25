@@ -2,6 +2,8 @@
   max-width: @desktop;
   margin-bottom: 40px;
   padding: 0 20px;
+
+  counter-reset: guide;
 }
 
 .guide__title {
@@ -83,30 +85,9 @@
 
       top: -40px;
       left: 120px;
-    }
-  }
 
-  .guide__item--natural {
-    &::after {
-      content: "1";
-    }
-  }
-
-  .guide__item--instant {
-    &::after {
-      content: "2";
-    }
-  }
-
-  .guide__item--replace {
-    &::after {
-      content: "3";
-    }
-  }
-
-  .guide__item--enjoy {
-    &::after {
-      content: "4";
+      counter-increment: guide;
+      content: counter(guide);
     }
   }
 }
