@@ -1,0 +1,24 @@
+.main-nav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  min-width: 65px;
+  min-height: 65px;
+
+  top: -67px;
+  right: 0;
+}
+
+@media (min-width: @tablet) {
+  .main-nav {
+    flex-direction: row;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}

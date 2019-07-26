@@ -1,4 +1,6 @@
 .social {
+  display: flex;
+  justify-content: center;
   margin: 0;
   padding: 20px 0 20px;
 
@@ -6,4 +8,14 @@
 
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.social__item {
+  margin: 0 18px;
+}
+
+@media (min-width: @tablet) {
+  .social {
+    border: none;
+  }
 }

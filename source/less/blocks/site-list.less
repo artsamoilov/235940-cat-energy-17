@@ -1,4 +1,7 @@
 .site-list {
+  display: flex;
+  flex-direction: column;
+
   margin: 0;
   padding: 0;
 
@@ -17,9 +20,36 @@
   display: block;
   padding: 22px 0 23px;
 
-  border-top: 1px solid @lightest-grey;
+  border-top: 1px solid @light-grey;
 }
 
 .site-list__item:last-child a {
-  border-bottom: 1px solid @lightest-grey;
+  border-bottom: 1px solid @light-grey;
+}
+
+@media (min-width: @tablet) {
+  .site-list {
+    flex-direction: row;
+    margin: auto 30px;
+
+    flex-grow: 1;
+
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 400;
+  }
+
+  .site-list__item a,
+  .site-list__item:last-child a {
+    padding: 12px 0;
+    margin: auto 0 auto 36px;
+
+    border: none;
+  }
+}
+
+@media (min-width: @desktop) {
+  .site-list {
+    margin: auto 110px;
+  }
 }
