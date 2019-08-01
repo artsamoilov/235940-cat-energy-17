@@ -14,6 +14,23 @@
   margin: 0 19px;
 }
 
+.social__link {
+  &:hover,
+  &:focus {
+    path {
+      fill: @leaf;
+    }
+
+    circle {
+      fill: @leaf;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 @media (min-width: @tablet) {
   .social {
     border: none;
