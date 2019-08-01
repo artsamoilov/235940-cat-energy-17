@@ -1,6 +1,6 @@
 .goals {
   max-width: @desktop;
-  padding: 22px 20px;
+  padding: 22px 20px 0;
 }
 
 .goals__list {
@@ -21,7 +21,7 @@
 
 .goals__heading {
   position: relative;
-  margin: 15px 0 30px;
+  margin: 11px 0 30px;
   padding-left: 72px;
 
   font-family: @font-accent;
@@ -39,15 +39,45 @@
     height: 50px;
 
     top: -5px;
-    left: 0;
+    left: 2px;
 
     border-radius: 50%;
     background-color: @leaf;
   }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-repeat: no-repeat;
+  }
+}
+
+.goals__heading--weight-loss {
+  &::after {
+    top: -8px;
+    left: 10px;
+
+    width: 35px;
+    height: 49px;
+
+    background-image: url("../../img/icon-cat-slim.svg");
+  }
+}
+
+.goals__heading--weight-gain {
+  &::after {
+    top: 6px;
+    left: -7px;
+
+    width: 67px;
+    height: 28px;
+
+    background-image: url("../../img/icon-cat-pro.svg");
+  }
 }
 
 .goals__description {
-  padding-bottom: 20px;
+  padding-bottom: 21px;
   margin-bottom: 0;
 
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -55,7 +85,8 @@
 
 .goals__link {
   display: block;
-  padding: 18px 0 20px;
+  position: relative;
+  padding: 20px 0;
 
   font-family: @font-accent;
   font-size: 16px;
@@ -63,6 +94,50 @@
   font-weight: 400;
   text-transform: uppercase;
   color: @black;
+
+  &::before {
+    position: absolute;
+    content: "";
+
+    top: 27px;
+    left: 96px;
+
+    width: 18px;
+    height: 2px;
+
+    background-color: @dark-grey;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+
+    top: 22px;
+    left: 113px;
+
+    width: 12px;
+    height: 12px;
+
+    border: 6px solid @dark-grey;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-right: none;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      width: 28px;
+    }
+
+    &::after {
+      left: 122px;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet) {
@@ -73,12 +148,12 @@
 
   .goals__item {
     margin-bottom: 30px;
-    padding: 52px;
+    padding: 52px 52px 42px;
   }
 
   .goals__heading {
     position: relative;
-    margin: 15px 0 30px;
+    margin: 24px 0;
     padding-left: 0;
     padding-right: 210px;
 
@@ -88,14 +163,37 @@
       width: 200px;
       height: 200px;
 
-      top: 20px;
+      top: 16px;
       left: auto;
       right: 10px;
     }
   }
 
+  .goals__heading--weight-loss {
+    &::after {
+      top: 4px;
+      left: auto;
+      right: 40px;
+
+      width: 141px;
+      height: 194px;
+    }
+  }
+
+  .goals__heading--weight-gain {
+    &::after {
+      top: 59px;
+      left: auto;
+      right: -24px;
+
+      width: 268px;
+      height: 113px;
+    }
+  }
+
   .goals__description {
-    padding-right: 210px;
+    padding-right: 220px;
+    margin-bottom: 16px;
 
     font-size: 16px;
     line-height: 24px;
@@ -104,18 +202,35 @@
   }
 
   .goals__description--weight-gain {
-    padding-right: 250px;
+    padding-right: 260px;
   }
 
   .goals__link {
     font-size: 20px;
     line-height: 20px;
+
+    &::before {
+      top: 29px;
+      left: 130px;
+    }
+
+    &::after {
+      top: 24px;
+      left: 147px;
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        left: 156px;
+      }
+    }
   }
 }
 
 @media (min-width: @desktop) {
   .goals {
-    margin: 80px auto;
+    margin: 80px auto 42px;
     padding: 0 110px;
   }
 
@@ -127,13 +242,12 @@
 
   .goals__item {
     width: 570px;
-    padding: 52px;
   }
 
   .goals__heading {
-    padding-left: 164px;
+    padding-left: 162px;
     padding-right: 0;
-    margin-bottom: 70px;
+    margin-bottom: 74px;
 
     &::before {
       width: 100px;
@@ -145,7 +259,30 @@
     }
   }
 
+  .goals__heading--weight-loss {
+    &::after {
+      top: -35px;
+      left: 14px;
+      right: auto;
+
+      width: 71px;
+      height: 97px;
+    }
+  }
+
+  .goals__heading--weight-gain {
+    &::after {
+      top: -8px;
+      left: -18px;
+      right: auto;
+
+      width: 134px;
+      height: 57px;
+    }
+  }
+
   .goals__description {
     padding: 0;
+    margin-bottom: 12px;
   }
 }

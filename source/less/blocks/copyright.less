@@ -1,12 +1,24 @@
 .copyright {
   display: flex;
   justify-content: space-between;
+  margin: 20px 0 0;
 }
 
 .copyright__title {
   margin: auto 23px auto 0;
+  font-size: 16px;
 }
 
 .copyright__logo {
-  margin: auto 0;
+  margin: 20px 0;
+}
+
+@media (min-width: @tablet) {
+  .copyright {
+    margin-top: 14px;
+  }
+
+  .copyright__title {
+    margin-top: 8px;
+  }
 }

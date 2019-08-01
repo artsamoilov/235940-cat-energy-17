@@ -1,19 +1,35 @@
 .hero-image {
   display: flex;
   flex-direction: column;
+  position: relative;
   padding: 25px 20px 0;
 
   font-family: @font-accent;
   text-align: center;
   color: @white;
 
-  background-image: url("../../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
+  &::before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    min-height: 305px;
+
+    background-color: @leaf;
+    background-image: url("../../img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }
 
 .hero-image__title {
   margin-top: 0;
+  margin-bottom: 12px;
 
   font-size: 36px;
   line-height: 36px;
@@ -26,6 +42,8 @@
 }
 
 .hero-image__picture {
+  margin-top: 14px;
+  margin-bottom: 2px;
   align-self: center;
 }
 
@@ -36,38 +54,75 @@
 @media (min-width: @tablet) {
   .hero-image {
     max-width: @desktop;
-    margin: 0 auto;
-    padding: 60px 120px;
+    margin: 0 auto 478px;
+    padding: 30px 120px;
     align-items: flex-start;
 
     text-align: left;
     color: @black;
 
-    background-image: none;
+    &::before {
+      background: none;
+    }
   }
 
   .hero-image__title {
+    margin-bottom: 20px;
     width: 420px;
     font-size: 60px;
     line-height: 60px;
   }
 
   .hero-image__description {
+    margin-bottom: 50px;
     font-size: 20px;
     line-height: 20px;
   }
 
+  .hero-image__picture {
+    position: absolute;
+    content: "";
+    z-index: -1;
+
+    top: 230px;
+    left: auto;
+  }
+
   .hero-image__button {
-    padding-left: 26px;
-    padding-right: 26px;
+    padding: 16px 26px;
+
+    font-size: 20px;
   }
 }
 
 @media (min-width: @desktop) {
   .hero-image {
     padding-left: 190px;
+    margin-bottom: 240px;
 
-    background-image: url("../../img/index-background-desktop@1x.jpg");
-    background-position: top right;
+    &::before {
+      top: -172px;
+      left: 50%;
+
+      width: 50%;
+      min-height: 696px;
+
+      background-color: @leaf;
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-image: url("../../img/index-background-desktop@1x.jpg");
+    }
+  }
+
+  .hero-image__title {
+    margin-top: 20px;
+  }
+
+  .hero-image__description {
+    margin-bottom: 54px;
+  }
+
+  .hero-image__picture {
+    top: -30px;
   }
 }
