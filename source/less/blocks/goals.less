@@ -50,29 +50,29 @@
     content: "";
     background-repeat: no-repeat;
   }
-}
 
-.goals__heading--weight-loss {
-  &::after {
-    top: -8px;
-    left: 10px;
+  &--weight-loss {
+    &::after {
+      top: -8px;
+      left: 10px;
 
-    width: 35px;
-    height: 49px;
+      width: 35px;
+      height: 49px;
 
-    background-image: url("../../img/icon-cat-slim.svg");
+      background-image: url("../../img/icon-cat-slim.svg");
+    }
   }
-}
 
-.goals__heading--weight-gain {
-  &::after {
-    top: 6px;
-    left: -7px;
+  &--weight-gain {
+    &::after {
+      top: 6px;
+      left: -7px;
 
-    width: 67px;
-    height: 28px;
+      width: 67px;
+      height: 28px;
 
-    background-image: url("../../img/icon-cat-pro.svg");
+      background-image: url("../../img/icon-cat-pro.svg");
+    }
   }
 }
 
@@ -84,9 +84,11 @@
 }
 
 .goals__link {
-  display: flex;
+  display: inline-block;
+  vertical-align: middle;
   position: relative;
-  padding: 20px 0;
+  padding: 20px 47px 20px 0;
+  margin-right: auto;
 
   font-family: @font-accent;
   font-size: 16px;
@@ -99,10 +101,10 @@
     position: absolute;
     content: "";
 
-    top: 27px;
-    left: 96px;
+    top: 26px;
+    right: 13px;
 
-    width: 18px;
+    width: 22px;
     height: 2px;
 
     background-color: @dark-grey;
@@ -112,8 +114,8 @@
     position: absolute;
     content: "";
 
-    top: 22px;
-    left: 113px;
+    top: 21px;
+    right: 6px;
 
     width: 12px;
     height: 12px;
@@ -128,10 +130,11 @@
   &:focus {
     &::before {
       width: 28px;
+      right: 7px;
     }
 
     &::after {
-      left: 122px;
+      right: 0;
     }
   }
 
@@ -167,27 +170,27 @@
       left: auto;
       right: 10px;
     }
-  }
 
-  .goals__heading--weight-loss {
-    &::after {
-      top: 4px;
-      left: auto;
-      right: 40px;
+    &--weight-loss {
+      &::after {
+        top: 4px;
+        left: auto;
+        right: 40px;
 
-      width: 141px;
-      height: 194px;
+        width: 141px;
+        height: 194px;
+      }
     }
-  }
 
-  .goals__heading--weight-gain {
-    &::after {
-      top: 59px;
-      left: auto;
-      right: -24px;
+    &--weight-gain {
+      &::after {
+        top: 59px;
+        left: auto;
+        right: -24px;
 
-      width: 268px;
-      height: 113px;
+        width: 268px;
+        height: 113px;
+      }
     }
   }
 
@@ -199,31 +202,23 @@
     line-height: 24px;
 
     border-bottom: none;
-  }
 
-  .goals__description--weight-gain {
-    padding-right: 260px;
+    &--weight-gain {
+      padding-right: 260px;
+    }
   }
 
   .goals__link {
     font-size: 20px;
     line-height: 20px;
+    padding-right: 60px;
 
     &::before {
       top: 29px;
-      left: 130px;
     }
 
     &::after {
       top: 24px;
-      left: 147px;
-    }
-
-    &:hover,
-    &:focus {
-      &::after {
-        left: 156px;
-      }
     }
   }
 }
@@ -257,27 +252,27 @@
       left: 0;
       right: auto;
     }
-  }
 
-  .goals__heading--weight-loss {
-    &::after {
-      top: -35px;
-      left: 14px;
-      right: auto;
+    &--weight-loss {
+      &::after {
+        top: -35px;
+        left: 14px;
+        right: auto;
 
-      width: 71px;
-      height: 97px;
+        width: 71px;
+        height: 97px;
+      }
     }
-  }
 
-  .goals__heading--weight-gain {
-    &::after {
-      top: -8px;
-      left: -18px;
-      right: auto;
+    &--weight-gain {
+      &::after {
+        top: -8px;
+        left: -18px;
+        right: auto;
 
-      width: 134px;
-      height: 57px;
+        width: 134px;
+        height: 57px;
+      }
     }
   }
 
