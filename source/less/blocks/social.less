@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   margin: 0;
-  padding: 20px 0 20px;
+  padding: 24px 10px 16px 0;
 
   list-style: none;
 
@@ -11,7 +11,24 @@
 }
 
 .social__item {
-  margin: 0 18px;
+  margin: 0 19px;
+}
+
+.social__link {
+  &:hover,
+  &:focus {
+    path {
+      fill: @leaf;
+    }
+
+    circle {
+      fill: @leaf;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet) {

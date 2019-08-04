@@ -1,9 +1,42 @@
 .more {
+  position: relative;
+  padding: 80px 37px 39px;
+
+  text-align: center;
+
   border-bottom: 1px solid @light-grey;
+
+  &::before {
+    position: absolute;
+    content: "";
+
+    width: 31px;
+    height: 2px;
+
+    top: 40px;
+    left: calc(50% - 15px);
+
+    background-color: @darkest-grey;
+    opacity: 0.3;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+
+    width: 2px;
+    height: 31px;
+
+    top: 26px;
+    left: calc(50% - 1px);
+
+    background-color: @darkest-grey;
+    opacity: 0.3;
+  }
 }
 
 .more__heading {
-  margin: 0 0 10px;
+  margin: 0 0 8px;
 
   font-family: @font-accent;
   font-weight: 400;
@@ -23,29 +56,56 @@
 .more__button {
   margin: 0;
 
+  font-size: 16px;
   color: @dark-grey;
 
   background-color: @lightest-grey;
+
+  &:hover,
+  &:focus {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
 }
 
 @media (min-width: @tablet) {
   .more {
     border: 1px solid @light-grey;
     background: none;
+
+    &::before {
+      width: 61px;
+      height: 2px;
+
+      top: 83px;
+      left: calc(50% - 30px);
+    }
+
+    &::after {
+      width: 2px;
+      height: 61px;
+
+      top: 54px;
+      left: calc(50% - 1px);
+    }
   }
 
   .more__heading {
     width: 140px;
-    margin: 0 auto 10px;
+    margin: 84px auto 24px;
 
     font-size: 20px;
   }
 
   .more__description {
-    margin: 28px auto 32px;
+    margin: 0 auto 32px;
     width: 168px;
 
     font-size: 16px;
+    line-height: 20px;
   }
 
   .more__button {

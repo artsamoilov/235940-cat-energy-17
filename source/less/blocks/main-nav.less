@@ -9,8 +9,43 @@
   min-width: 65px;
   min-height: 65px;
 
+  font-size: 0;
+
+  border: none;
+  background: none;
+
   top: -67px;
   right: 0;
+
+  &::before {
+    position: absolute;
+    content: "";
+
+    width: 24px;
+    height: 2px;
+
+    top: 32px;
+    left: 20px;
+
+    transform: rotate(45deg);
+
+    background-color: @darkest-grey;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+
+    width: 2px;
+    height: 24px;
+
+    top: 21px;
+    left: 31px;
+
+    transform: rotate(45deg);
+
+    background-color: @darkest-grey;
+  }
 }
 
 @media (min-width: @tablet) {

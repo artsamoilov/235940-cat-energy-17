@@ -14,14 +14,22 @@
 .page-footer__logo {
   display: block;
 
-  padding: 20px 0;
+  padding: 20px 0 16px;
   margin-bottom: 10px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 @media (min-width: @tablet) {
   .page-footer__wrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 44px 30px;
 
     flex-direction: row;
     justify-content: space-between;
