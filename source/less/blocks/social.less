@@ -1,8 +1,9 @@
 .social {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 0;
-  padding: 24px 10px 16px 0;
+  padding: 22px 10px 18px 0;
 
   list-style: none;
 
@@ -33,6 +34,31 @@
 
 @media (min-width: @tablet) {
   .social {
+    margin-left: 30px;
+    padding: 16px 10px 24px 0;
+
     border: none;
+  }
+
+  .social__item {
+    margin: 0 14px;
+  }
+
+  .social__link {
+    & svg {
+      height: auto;
+    }
+
+    &--vkontakte svg {
+      width: 30px;
+    }
+
+    &--instagram svg {
+      width: 24px;
+    }
+
+    &--facebook svg {
+      width: 14px;
+    }
   }
 }
