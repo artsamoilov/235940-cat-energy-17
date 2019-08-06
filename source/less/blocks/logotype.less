@@ -1,6 +1,6 @@
 .logotype {
   display: flex;
-  margin: 12px 65px 12px 20px;
+  margin: 12px 53px 12px 20px;
 
   &:hover,
   &:focus {
@@ -13,7 +13,8 @@
 }
 
 .logotype__image {
-  margin-right: 10px;
+  width: 33px;
+  height: auto;
 }
 
 .logotype__title {
@@ -22,16 +23,24 @@
 
 @media (min-width: @tablet) {
   .logotype {
-    margin: 34px 30px;
+    margin: 24px 0 24px 30px;
+  }
+
+  .logotype__image {
+    width: 174px;
   }
 
   .logotype__title {
-    margin-left: 0;
+    display: none;
   }
 }
 
 @media (min-width: @desktop) {
   .logotype {
-    margin: 53px 110px;
+    margin: 42px 110px;
+  }
+
+  .logotype__image {
+    width: 203px;
   }
 }
