@@ -1,0 +1,291 @@
+.program {
+  max-width: @desktop;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+
+  overflow-x: hidden;
+}
+
+.program__title {
+  margin: 14px 20px 26px;
+
+  font-family: @font-accent;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 60px;
+  color: @black;
+}
+
+.program__description {
+  margin: 0 20px 38px;
+  padding-right: 10px;
+
+  font-family: @font-accent;
+  text-transform: uppercase;
+  color: @black;
+}
+
+.program__form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.program__fieldset {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.program__group {
+  margin: 0 0 10px;
+  padding: 0;
+
+  list-style: none;
+
+  font-size: 16px;
+  font-family: @font-accent;
+  text-transform: uppercase;
+
+  &--goal {
+    margin: 25px -20px 30px;
+    padding: 10px 0 18px;
+
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+  }
+
+  &--contacts {
+    margin-bottom: 28px;
+  }
+
+  &--options {
+    margin: -10px -20px 30px;
+  }
+}
+
+.program__item {
+  display: flex;
+  position: relative;
+  margin-bottom: 15px;
+
+  &--goal,
+  &--option {
+    margin-bottom: 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+  }
+
+  &--email {
+    &::after {
+      top: 15px;
+      right: 15px;
+
+      width: 18px;
+      height: 14px;
+
+      background-image: url("../../img/icon-mail.svg");
+    }
+  }
+
+  &--phone {
+    &::after {
+      top: 11px;
+      right: 12px;
+
+      width: 21px;
+      height: 21px;
+
+      background-image: url("../../img/icon-phone.svg");
+    }
+  }
+}
+
+.program__label {
+  position: relative;
+  padding: 13px 15px 0 0;
+
+  color: @darkest-grey;
+
+  &--radio,
+  &--checkbox {
+    margin: 10px 20px 2px;
+    padding: 6px 0 6px 45px;
+  }
+}
+
+.program__input {
+  position: relative;
+  padding: 12px;
+
+  flex-grow: 1;
+
+  font: inherit;
+  text-transform: inherit;
+  color: @dark-grey;
+
+  border: 1px solid rgba(205, 205, 205, 0.5);
+
+  outline: none;
+
+  &--email,
+  &--phone {
+    padding-right: 40px;
+  }
+
+  &:hover {
+    border-color: @grey;
+  }
+
+  &:focus,
+  &:active {
+    border: 2px solid @dark-grey;
+    padding: 11px;
+  }
+}
+
+.program__radio {
+  & + .program__label {
+    &::before {
+      position: absolute;
+      content: "";
+
+      width: 30px;
+      height: 30px;
+
+      top: 0;
+      left: 0;
+
+      border: 1px solid @grey;
+      border-radius: 50%;
+    }
+
+    &--radio-checked::after {
+      position: absolute;
+      content: "";
+
+      width: 12px;
+      height: 12px;
+
+      top: 9px;
+      left: 9px;
+
+      background-color: @leaf;
+      border-radius: 50%;
+    }
+  }
+
+  &:hover + .program__label,
+  &:focus + .program__label {
+    &::before {
+      border-color: #bababa;
+    }
+  }
+
+  &:active + .program__label {
+    opacity: 0.3;
+  }
+}
+
+.program__group-title {
+  position: relative;
+  display: flex;
+  margin: 10px auto 34px 0;
+  padding: 0;
+
+  font-family: @font-accent;
+  font-size: 24px;
+  line-height: 24px;
+  color: @black;
+
+  &::after {
+    position: absolute;
+    content: "";
+
+    width: 100vw;
+    height: 3px;
+
+    top: 14px;
+    right: calc(-100vw - 20px);
+
+    background-color: @leaf;
+  }
+}
+
+.program__textarea {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 26px;
+  padding: 12px;
+
+  resize: none;
+
+  font-size: 16px;
+  font-family: @font-accent;
+  text-transform: uppercase;
+
+  border: 1px solid rgba(205, 205, 205, 0.5);
+}
+
+.program__checkbox {
+  & + .program__label {
+    &::before {
+      position: absolute;
+      content: "";
+
+      width: 30px;
+      height: 30px;
+
+      top: 0;
+      left: 0;
+
+      border: 1px solid @grey;
+    }
+
+    &--checkbox-checked::after {
+      position: absolute;
+      content: "";
+
+      width: 21px;
+      height: 16px;
+
+      top: 7px;
+      left: 6px;
+
+      background-image: url("../../img/icon-tick.svg");
+    }
+  }
+
+  &:hover + .program__label,
+  &:focus + .program__label {
+    &::before {
+      border-color: #bababa;
+    }
+  }
+
+  &:active + .program__label {
+    opacity: 0.3;
+  }
+}
+
+.program__submit {
+  margin: 2px 0 6px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+
+  font-size: 16px;
+
+  border: none;
+}
+
+.program__comment {
+  margin-bottom: 30px;
+
+  text-align: center;
+}

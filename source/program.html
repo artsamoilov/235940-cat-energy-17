@@ -69,6 +69,84 @@
       </nav>
     </header>
 
+<!-- Форма подбора программы -->
+    <main class="program">
+      <h1 class="program__title">Подбор программы</h1>
+      <p class="program__description">Заполните анкету, и мы подберём программу питания для вашего кота</p>
+      <form class="program__form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="program__fieldset">
+          <ul class="program__group">
+            <li class="program__item">
+              <label class="program__label" for="cat-name">Имя:*</label>
+              <input class="program__input" type="text" id="cat-name" placeholder="Барсик" required>
+            </li>
+            <li class="program__item">
+              <label class="program__label" for="cat-weight">Вес (кг):*</label>
+              <input class="program__input" type="number" id="cat-weight" placeholder="7" required>
+            </li>
+            <li class="program__item">
+              <label class="program__label" for="cat-age">Возраст (лет):</label>
+              <input class="program__input" type="number" id="cat-age" placeholder="7">
+            </li>
+          </ul>
+          <ul class="program__group program__group--goal">
+            <li class="program__item program__item--goal">
+              <input class="program__radio visually-hidden" type="radio" name="goal" value="weight-loss" id="goal-loss" checked>
+              <label class="program__label program__label--radio program__label--radio-checked" for="goal-loss">Похудение</label>
+            </li>
+            <li class="program__item program__item--goal">
+              <input class="program__radio visually-hidden" type="radio" name="goal" value="weight-gain" id="goal-gain">
+              <label class="program__label program__label--radio" for="goal-gain">Набор массы</label>
+            </li>
+            <li class="program__item program__item--goal">
+              <input class="program__radio visually-hidden" type="radio" name="goal" value="unknown" id="goal-unknown">
+              <label class="program__label program__label--radio" for="goal-unknown">Не знаю (Нужен ваш совет)</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="program__fieldset">
+          <legend class="program__group-title">Контактные данные<br>(владельца кота)</legend>
+          <ul class="program__group program__group--contacts">
+            <li class="program__item program__item--email">
+              <label class="program__label" for="user-email">E-mail:*</label>
+              <input class="program__input program__input--email" type="email" id="user-email" placeholder="kuklachev@gmail.com" required>
+            </li>
+            <li class="program__item program__item--phone">
+              <label class="program__label" for="user-phone">Телефон:*</label>
+              <input class="program__input program__input--phone" type="tel" id="user-phone" placeholder="8 (960) 900-60-90" required>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="program__fieldset">
+          <legend class="program__group-title">Комментарий</legend>
+          <textarea class="program__textarea" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
+        <fieldset class="program__fieldset">
+          <legend class="program__group-title">Дополнительно</legend>
+          <ul class="program__group program__group--options">
+            <li class="program__item program__item--option">
+              <input class="program__checkbox visually-hidden" type="checkbox" name="options" value="alt-sugar" id="option-sugar" checked>
+              <label class="program__label program__label--checkbox program__label--checkbox-checked" for="option-sugar">Сахарозаменитель</label>
+            </li>
+            <li class="program__item program__item--option">
+              <input class="program__checkbox visually-hidden" type="checkbox" name="options" value="water" id="option-water">
+              <label class="program__label program__label--checkbox" for="option-water">Питьевая вода</label>
+            </li>
+            <li class="program__item program__item--option">
+              <input class="program__checkbox visually-hidden" type="checkbox" name="options" value="milk" id="option-milk">
+              <label class="program__label program__label--checkbox" for="option-milk">Молоко</label>
+            </li>
+            <li class="program__item program__item--option">
+              <input class="program__checkbox visually-hidden" type="checkbox" name="options" value="vitamines" id="option-vitamines">
+              <label class="program__label program__label--checkbox" for="option-vitamines">Витамины</label>
+            </li>
+          </ul>
+        </fieldset>
+        <input class="button program__submit" type="submit" value="Отправить заявку">
+        <p class="program__comment">* — Обязательные поля</p>
+      </form>
+    </main>
+
 <!-- Футер -->
     <footer class="page-footer">
       <div class="page-footer__wrapper">
