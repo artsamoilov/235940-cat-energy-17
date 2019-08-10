@@ -30,6 +30,7 @@
 .program__form {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   padding: 0 20px;
 }
 
@@ -112,6 +113,8 @@
   padding: 13px 15px 0 0;
 
   color: @darkest-grey;
+
+  cursor: pointer;
 
   &--radio,
   &--checkbox {
@@ -196,7 +199,8 @@
 .program__group-title {
   position: relative;
   display: flex;
-  margin: 10px auto 34px 0;
+  max-width: 182px;
+  margin: 10px 0 34px;
   padding: 0;
 
   font-family: @font-accent;
@@ -231,6 +235,18 @@
   text-transform: uppercase;
 
   border: 1px solid rgba(205, 205, 205, 0.5);
+
+  outline: none;
+
+  &:hover {
+    border-color: @grey;
+  }
+
+  &:focus,
+  &:active {
+    border: 2px solid @dark-grey;
+    padding: 11px;
+  }
 }
 
 .program__checkbox {
@@ -274,10 +290,14 @@
   }
 }
 
+.program__submit-group {
+  display: flex;
+  flex-direction: column;
+}
+
 .program__submit {
   margin: 2px 0 6px;
-  padding-top: 10px;
-  padding-bottom: 8px;
+  padding: 10px 10px 8px;
 
   font-size: 16px;
 
@@ -288,4 +308,226 @@
   margin-bottom: 30px;
 
   text-align: center;
+}
+
+@media (min-width: @tablet) {
+  .program__title {
+    margin: 30px 30px 56px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .program__description {
+    width: 340px;
+    margin: 0 70px 65px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .program__form {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .program__item {
+    margin-bottom: 20px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    &--goal {
+      margin-bottom: 12px;
+    }
+
+    &--option {
+      width: 50%;
+      margin-bottom: 12px;
+    }
+
+    &--email {
+      &::after {
+        top: 20px;
+      }
+    }
+
+    &--phone {
+      &::after {
+        top: 18px;
+      }
+    }
+  }
+
+  .program__input {
+    padding: 10px 20px;
+
+    &:focus,
+    &:active {
+      padding: 9px 19px;
+    }
+  }
+
+  .program__label {
+    padding-right: 20px;
+    padding-top: 16px;
+
+    &--radio {
+      margin: 0 20px;
+      padding: 10px 0 10px 60px;
+    }
+
+    &--checkbox {
+      margin: 0 20px 0 0;
+      padding: 10px 0 10px 60px;
+    }
+  }
+
+  .program__group {
+    margin-bottom: 66px;
+
+    &--goal {
+      margin: 72px 0 74px;
+      padding: 24px 8px 14px;
+
+      border: 1px solid #ededed;
+    }
+
+    &--options {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -18px -60px 20px 0;
+    }
+  }
+
+  .program__radio {
+    & + .program__label {
+      &::before {
+        width: 40px;
+        height: 40px;
+
+        top: 0;
+        left: 0;
+      }
+
+      &--radio-checked::after {
+        width: 18px;
+        height: 18px;
+
+        top: 11px;
+        left: 11px;
+      }
+    }
+  }
+
+  .program__group-title {
+    max-width: unset;
+    margin-bottom: 76px;
+
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      position: absolute;
+      content: "";
+
+      width: 100vw;
+      height: 3px;
+
+      top: 22px;
+      left: calc(-100vw - 40px);
+
+      background-color: @leaf;
+    }
+
+    &::after {
+      top: 22px;
+      right: calc(-100vw - 40px);
+    }
+  }
+
+  .program__textarea {
+    height: 174px;
+    margin-bottom: 60px;
+    padding: 15px 20px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    &:focus,
+    &:active {
+      padding: 14px 19px;
+    }
+  }
+
+  .program__checkbox {
+    & + .program__label {
+      flex-shrink: 0;
+      margin-bottom: 20px;
+      margin-right: auto;
+
+      &::before {
+        width: 40px;
+        height: 40px;
+
+        top: 0;
+        left: 0;
+      }
+
+      &--checkbox-checked::after {
+        top: 13px;
+        left: 10px;
+      }
+    }
+  }
+
+  .program__submit-group {
+    flex-direction: row;
+    margin-bottom: 64px;
+  }
+
+  .program__submit {
+    padding: 16px 65px;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  .program__comment {
+    margin: 18px 60px;
+
+    font-size: 16px;
+    line-height: 16px;
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop) {
+  .program {
+    overflow-x: unset;
+  }
+
+  .program__title {
+    margin: 16px 110px 56px;
+  }
+
+  .program__description {
+    margin: 0 110px 65px;
+  }
+
+  .program__form {
+    padding: 0;
+    margin: 0 110px;
+  }
+
+  .program__fieldset {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .program__group {
+    width: 570px;
+    margin-right: 0;
+  }
 }
