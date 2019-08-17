@@ -169,7 +169,9 @@
       border-radius: 50%;
     }
 
-    &--radio-checked::after {
+    &::after {
+      display: none;
+
       position: absolute;
       content: "";
 
@@ -182,6 +184,10 @@
       background-color: @leaf;
       border-radius: 50%;
     }
+  }
+
+  &:checked ~ .program__label::after {
+    display: block;
   }
 
   &:hover + .program__label,
@@ -264,7 +270,9 @@
       border: 1px solid @grey;
     }
 
-    &--checkbox-checked::after {
+    &::after {
+      display: none;
+
       position: absolute;
       content: "";
 
@@ -276,6 +284,10 @@
 
       background-image: url("../../img/icon-tick.svg");
     }
+  }
+
+  &:checked ~ .program__label::after {
+    display: block;
   }
 
   &:hover + .program__label,
@@ -354,7 +366,7 @@
 
     &--phone {
       &::after {
-        top: 18px;
+        top: 16px;
       }
     }
   }
@@ -410,7 +422,7 @@
         left: 0;
       }
 
-      &--radio-checked::after {
+      &::after {
         width: 18px;
         height: 18px;
 
@@ -474,7 +486,7 @@
         left: 0;
       }
 
-      &--checkbox-checked::after {
+      &::after {
         top: 13px;
         left: 10px;
       }
@@ -483,7 +495,7 @@
 
   .program__submit-group {
     flex-direction: row;
-    margin-bottom: 64px;
+    margin-bottom: 66px;
   }
 
   .program__submit {
@@ -521,13 +533,61 @@
     margin: 0 110px;
   }
 
-  .program__fieldset {
+  .program__container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
   }
 
   .program__group {
     width: 570px;
     margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 47px;
+
+    &--cat-info {
+      margin-bottom: 0;
+    }
+
+    &--goal {
+      margin-top: 0;
+      margin-bottom: auto;
+    }
+
+    &--contacts {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &--options {
+      width: 100%;
+      margin-bottom: 28px;
+      justify-content: space-between;
+    }
+  }
+
+  .program__item {
+    &--email,
+    &--phone {
+      width: 570px;
+    }
+
+    &--option {
+      width: 20%;
+    }
+  }
+
+  .program__submit-group {
+    margin-bottom: 76px;
+  }
+
+  .program__submit {
+    width: 568px;
+  }
+
+  .program__comment {
+    margin-left: 82px;
   }
 }

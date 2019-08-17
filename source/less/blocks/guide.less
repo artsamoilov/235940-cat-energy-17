@@ -1,7 +1,7 @@
 .guide {
   max-width: @desktop;
   margin-top: -2px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   padding: 0 20px;
 
   counter-reset: guide;
@@ -91,6 +91,7 @@
 
 @media (min-width: @tablet) {
   .guide {
+    margin-bottom: 0;
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -103,6 +104,8 @@
   }
 
   .guide__list {
+    margin-bottom: -32px;
+
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -155,5 +158,6 @@
   .guide__item {
     width: 21%;
     padding-right: 10px;
+    margin-bottom: 100px;
   }
 }

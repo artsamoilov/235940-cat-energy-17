@@ -1,6 +1,6 @@
 .more {
   position: relative;
-  padding: 80px 37px 39px;
+  padding: 80px 37px 24px;
 
   text-align: center;
 
@@ -54,7 +54,7 @@
 }
 
 .more__button {
-  margin: 0;
+  margin: 0 -18px;
 
   font-size: 16px;
   color: @dark-grey;
@@ -73,6 +73,8 @@
 
 @media (min-width: @tablet) {
   .more {
+    padding: 80px 37px 39px;
+
     border: 1px solid @light-grey;
     background: none;
 
@@ -110,5 +112,7 @@
 
   .more__button {
     margin-top: auto;
+    margin-left: 0;
+    margin-right: 0;
   }
 }

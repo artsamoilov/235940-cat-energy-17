@@ -5,6 +5,8 @@
 }
 
 .main-nav__toggle {
+  display: none;
+
   position: absolute;
   min-width: 65px;
   min-height: 65px;
@@ -16,6 +18,10 @@
 
   top: -67px;
   right: 0;
+
+  cursor: pointer;
+
+  outline: none;
 
   &::before {
     position: absolute;
@@ -45,6 +51,15 @@
     transform: rotate(45deg);
 
     background-color: @darkest-grey;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
