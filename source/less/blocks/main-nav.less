@@ -23,34 +23,54 @@
 
   outline: none;
 
+  &::after {
+    content: none;
+  }
+
   &::before {
     position: absolute;
     content: "";
 
-    width: 24px;
-    height: 2px;
-
-    top: 32px;
+    top: 24px;
     left: 20px;
 
-    transform: rotate(45deg);
+    width: 25px;
+    height: 19px;
 
-    background-color: @darkest-grey;
+    background-image: url("../img/icon-mobile-menu.svg");
+    background-repeat: no-repeat;
   }
 
-  &::after {
-    position: absolute;
-    content: "";
+  &--close {
+    &::before {
+      position: absolute;
+      content: "";
 
-    width: 2px;
-    height: 24px;
+      width: 24px;
+      height: 2px;
 
-    top: 21px;
-    left: 31px;
+      top: 32px;
+      left: 20px;
 
-    transform: rotate(45deg);
+      transform: rotate(45deg);
 
-    background-color: @darkest-grey;
+      background-color: @darkest-grey;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+
+      width: 2px;
+      height: 24px;
+
+      top: 21px;
+      left: 31px;
+
+      transform: rotate(45deg);
+
+      background-color: @darkest-grey;
+    }
   }
 
   &:hover,
