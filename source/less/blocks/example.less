@@ -105,7 +105,8 @@
   display: flex;
   justify-content: center;
   margin-bottom: 18px;
-  padding: 0 auto;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .example__button {
@@ -125,6 +126,7 @@
 }
 
 .example__toggle-bar {
+  position: relative;
   min-width: 84px;
   height: 14px;
   margin: auto 0;
@@ -136,10 +138,19 @@
 }
 
 .example__toggle-value {
+  position: absolute;
+  content: "";
+
+  top: 3px;
+  left: 5px;
+
   height: 6px;
-  width: 50%;
+  width: calc(50% - 4px);
+
+  font-size: 0;
 
   background-color: @leaf;
+  border: none;
   border-radius: 3px;
 
   cursor: pointer;
@@ -177,14 +188,14 @@
   }
 
   .example__value {
-    padding: 14px 14px 20px;
+    padding: 14px 14px 18px;
 
     font-size: 30px;
     line-height: 37px;
   }
 
   .example__description {
-    margin: -10px auto 0;
+    margin: -8px auto 0;
     padding: 0 8px;
 
     font-size: 14px;
@@ -286,6 +297,8 @@
     }
 
     &:active {
+      padding-bottom: 7px;
+
       border: none;
     }
   }
@@ -304,8 +317,12 @@
   }
 
   .example__toggle-value {
-    position: relative;
+    position: absolute;
     margin: -17px auto 0;
+
+    top: 2px;
+    left: calc(50% - 16px);
+
     width: 34px;
     height: 34px;
 
@@ -451,5 +468,9 @@
   .example__toggle {
     margin-top: -102px;
     margin-right: 76px;
+  }
+
+  .example__toggle-value {
+    top: 4px;
   }
 }
