@@ -23,22 +23,24 @@
 
   outline: none;
 
-  &::after {
-    content: none;
-  }
+  &--menu {
+    &::after {
+      content: none;
+    }
 
-  &::before {
-    position: absolute;
-    content: "";
+    &::before {
+      position: absolute;
+      content: "";
 
-    top: 24px;
-    left: 20px;
+      top: 24px;
+      left: 20px;
 
-    width: 25px;
-    height: 19px;
+      width: 25px;
+      height: 19px;
 
-    background-image: url("../img/icon-mobile-menu.svg");
-    background-repeat: no-repeat;
+      background-image: url("../img/icon-mobile-menu.svg");
+      background-repeat: no-repeat;
+    }
   }
 
   &--close {
@@ -80,6 +82,12 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-nav__toggle--on {
+    display: block;
   }
 }
 
