@@ -58,9 +58,10 @@
   .item {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 
     text-align: center;
-    width: 324px;
+    min-width: 324px;
     margin: 0 30px 140px;
     padding: 163px 38px 40px;
 
@@ -104,8 +105,11 @@
 
 @media (min-width: @desktop) {
   .item {
+    flex-grow: 0;
+
+    min-width: unset;
     width: 245px;
-    margin: 0 0 142px;
+    margin: 0 80px 142px 0;
   }
 
   .item__picture {

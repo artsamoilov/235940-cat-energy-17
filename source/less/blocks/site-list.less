@@ -35,12 +35,18 @@
   }
 }
 
+@media (max-width: 767px) {
+  .site-list--hidden {
+    display: none;
+  }
+}
+
 @media (min-width: @tablet) {
   .site-list {
     flex-direction: row;
-    margin: auto 30px;
-
-    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin: 15px 30px 15px 60px;
 
     font-size: 18px;
     line-height: 25px;
@@ -51,7 +57,7 @@
 
   .site-list__item {
     padding: 8px 0 6px;
-    margin: auto 0 auto 36px;
+    margin: 20px 0 0 34px;
 
     border-top: none;
 
@@ -70,8 +76,8 @@
 
 @media (min-width: @desktop) {
   .site-list {
-    margin: auto 110px;
-
+    margin: 34px 110px 34px 406px;
+    max-height: 80px;
     font-size: 20px;
   }
 
